@@ -132,7 +132,8 @@ function layoutSlots() {
   order.forEach((lookId, i) => {
     const el = slotEls[lookId];
     if (!el) return;
-    el.className = `model-slot slot-${i}${i === 0 ? ' is-front' : ''}`;
+    const keep = ['pre-enter', 'soft-in'].filter(c => el.classList.contains(c));
+    el.className = `model-slot slot-${i}${i === 0 ? ' is-front' : ''}${keep.length ? ' ' + keep.join(' ') : ''}`;
     el.style.zIndex = 60 - i * 5;
     el.setAttribute('aria-label', i === 0 ? `Open ${LOOKS_BY_ID[lookId].name}` : `Bring ${LOOKS_BY_ID[lookId].name} to the front`);
     const img = $('.model-cut', el);
