@@ -1,0 +1,4 @@
+node_modules/
+.rembg/
+.DS_Store
+*.log
