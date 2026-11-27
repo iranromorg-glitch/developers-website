@@ -6,10 +6,9 @@
 <p align="center"><em>Fall '26 · editorial fashion e-commerce — open source, no build step.</em></p>
 
 <p align="center">
-  <a href="https://github.com/iranromorg-glitch/developers-website/actions/workflows/ci.yml"><img alt="CI" height="40" src="https://github.com/iranromorg-glitch/developers-website/actions/workflows/ci.yml/badge.svg"></a>
-  <img alt="License: MIT" src="assets/badges/license.svg">
-  <img alt="No build step required" src="assets/badges/nobuild.svg">
-  <img alt="Prices in USD" src="assets/badges/usd.svg">
+  <img alt="License: MIT" height="24" src="assets/badges/license.svg">
+  <img alt="No build step required" height="24" src="assets/badges/nobuild.svg">
+  <img alt="Prices in USD" height="24" src="assets/badges/usd.svg">
 </p>
 
 LINEUP is a complete, self-contained storefront for a New York fashion label's Fall '26 collection — women's and men's. It is a working shop, not a mockup: a runway-lineup hero, colourway memory, product pages with a 360° turntable, a bag with free-shipping progress, checkout, search, wishlist — all in vanilla HTML/CSS/JavaScript with zero frameworks and zero build tools.
