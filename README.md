@@ -6,6 +6,7 @@
 <p align="center"><em>Fall '26 · editorial fashion e-commerce — open source, no build step.</em></p>
 
 <p align="center">
+  <a href="https://github.com/iranromorg-glitch/developers-website/actions/workflows/ci.yml"><img alt="CI" height="40" src="https://github.com/iranromorg-glitch/developers-website/actions/workflows/ci.yml/badge.svg"></a>
   <img alt="License: MIT" src="assets/badges/license.svg">
   <img alt="No build step required" src="assets/badges/nobuild.svg">
   <img alt="Prices in USD" src="assets/badges/usd.svg">
