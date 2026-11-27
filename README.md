@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/img/cut/women-1.png" alt="LINEUP — Fall '26, the runway lineup" height="360">
+  <img src="assets/img/lineup-hero.jpg" alt="LINEUP — Fall '26, the runway lineup: six looks styled head to toe" width="880">
 </p>
 
 <h1 align="center">LINEUP</h1>
@@ -57,7 +57,7 @@ Warm paper `#f4f3f0` · ink `#151412` · muted grey `#77736c` · hairline `#e3e0
 
 ## 📦 Status & assets
 
-This is a functional demo storefront. Ten model photographs were generated and background-removed locally; product images are technical flat-lay illustrations (`tools/make_flats.py`). See `CHANGELOG.md` for exactly what is real and what is placeholder — the full guide to swapping in real photography is in [`docs/CUSTOMIZATION.md`](docs/CUSTOMIZATION.md).
+This is a functional demo storefront. Ten model photographs were generated and background-removed locally (`tools/cutout_v2.py` → `tools/tighten.py`); product images are technical flat-lay illustrations (`tools/make_flats.py`); the banner above is composed by `tools/make_hero.py`. See `CHANGELOG.md` for exactly what is real and what is placeholder — the full guide to swapping in real photography is in [`docs/CUSTOMIZATION.md`](docs/CUSTOMIZATION.md).
 
 ## 🤝 Contributing
 
