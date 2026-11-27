@@ -1,0 +1,13 @@
+{
+  "name": "lineup-developers-website",
+  "version": "1.1.0",
+  "description": "LINEUP — Fall '26: editorial fashion e-commerce experience. No build step, vanilla HTML/CSS/JS.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "serve": "python3 -m http.server 8080",
+    "check": "python3 tools/check_assets.py && node --check js/app.js && node --check js/data.js",
+    "smoke": "node tools/smoke.mjs"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,34 +1,68 @@
-# LINEUP — Fall '26
+<p align="center">
+  <img src="assets/img/cut/women-1.png" alt="LINEUP — Fall '26, the runway lineup" height="360">
+</p>
 
-Premium fashion e-commerce for a New York label. Fall '26 collection for women and men, priced in USD. Calm, editorial, gallery-white — a lookbook you can shop.
+<h1 align="center">LINEUP</h1>
+<p align="center"><em>Fall '26 · editorial fashion e-commerce — open source, no build step.</em></p>
 
-## Run it
+<p align="center">
+  <a href="https://github.com/iranromorg-glitch/developers-website/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/iranromorg-glitch/developers-website/actions/workflows/ci.yml/badge.svg"></a>
+  <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-151412?style=flat">
+  <img alt="No build step" src="https://img.shields.io/badge/build-none%20required-151412?style=flat">
+  <img alt="Prices USD" src="https://img.shields.io/badge/prices-USD-151412?style=flat">
+</p>
 
-No build step. Serve the folder statically:
+LINEUP is a complete, self-contained storefront for a New York fashion label's Fall '26 collection — women's and men's. It is a working shop, not a mockup: a runway-lineup hero, colourway memory, product pages with a 360° turntable, a bag with free-shipping progress, checkout, search, wishlist — all in vanilla HTML/CSS/JavaScript with zero frameworks and zero build tools.
+
+## ✨ What's inside
+
+- **The Runway Lineup** — six looks per cast in depth-of-field slots. Front model sharp and full-size; each look behind is smaller, higher, more blurred, more transparent. Click-to-front, swipe, arrow keys, walk-off/walk-in transitions, 360° turntable with drag-to-spin.
+- **3 colourways per look** with dissolved blur crossfades, per-look colour memory (persisted) and live price deltas.
+- **"In this look"** panel + **"Every piece"** grid — staggered product cards, wishlist hearts, hover zoom, quick-add in size M.
+- **Product pages** at `#look-<id>` (hash routing — the phone back button returns to the lineup) — sticky 4:5 gallery, 360° view, drag-to-turn, include/exclude pieces with round checkboxes, size validation with inline error, reserve-in-store flow, accordions, "You may also like" rail.
+- **Bag** — free-shipping progress ($150), pill quantity steppers, subtotal, checkout, toast notifications, `Escape` support.
+- Search overlay, members popover, dark footer, `prefers-reduced-motion`, keyboard navigation, visible focus states, fully responsive.
+
+## 🚀 Quick start
 
 ```sh
-python3 -m http.server 8080
-# → http://localhost:8080
+git clone https://github.com/iranromorg-glitch/developers-website.git
+cd developers-website
+python3 -m http.server 8080      # or: npm run serve
 ```
 
-## Highlights
+Open http://localhost:8080. That's it — nothing to install, nothing to compile.
 
-- **The Runway Lineup** — six looks in depth-of-field slots (scale / blur / opacity), front model full-size on the right. Next/previous, click-to-front, swipe, arrow keys; floating front model with breathing oval shadow; 360° turntable (auto-play, drag-to-spin) for Look 01 of each gender.
-- **Three colourways per look** with dissolve transitions, per-look colour memory (persisted in `localStorage`), live price deltas.
-- **"In this look"** right panel + **"Every piece"** grid — same card component, hearts, hover zoom, add-in-size-M.
-- **Product page** at `#look-<id>` (hash routing, phone back button returns to the lineup), 4:5 gallery with thumbnails, 360° view, round checkboxes with size validation ("Choose a size" shake), reserve-in-store flow, accordions, "You may also like" rail, sticky mobile add bar.
-- **Bag** — frosted drawer, free-shipping progress ($150 threshold), pill quantity steppers, checkout, toasts, Escape handling.
-- Reduced-motion support, keyboard navigation, visible focus states.
+```sh
+npm run check    # asset references + JS syntax
+npm run smoke    # headless jsdom smoke test (needs: npm i --no-save jsdom)
+```
 
-## Design system
+## 🗂 Project structure
 
-- Warm paper `#f4f3f0` · ink `#151412` · grey `#77736c` · hairline `#e3e0da` · tile `#d4d3d0`
-- **Instrument Serif** (wordmark, titles, look names) · **Manrope** (UI, prices, labels)
-- Pill buttons, 18–26px radii, 1px borders, soft diffused shadows, `cubic-bezier(.76,0,.24,1)` easing everywhere.
+```
+index.html            the whole page: header, runway lineup, grid, product view, bag, search, footer
+styles.css            design system (paper/ink/hairline, Instrument Serif + Manrope, motion tokens)
+js/data.js            the Fall '26 catalogue — looks, colourways, pieces, sizes, prices
+js/app.js             all interactivity (no frameworks, no dependencies)
+assets/               fonts (self-hosted woff2), model cutouts, product illustrations
+tools/                asset pipeline: check_assets.py, cutout.py, make_flats.py, smoke.mjs
+docs/CUSTOMIZATION.md how to adapt the catalogue, imagery and pricing to your own brand
+```
 
-## Asset pipeline & honest notes
+## 🎨 Design system
 
-- Ten base model photographs were art-directed and generated as full-body studio shots (women 01–06, men 01–04), background-removed locally (`mediapipe` selfie segmentation) into transparent cutouts in `assets/img/cut/`.
-- Colourways reuse the base cutout with per-colour CSS filters (the sandbox's 10-image generation budget was spent on the cast). Men's Looks 05 & 06 are typographic "hanging garment" lookbook plates (`men-5.svg`, `men-6.svg`) — swap in studio photography with `tools/` to complete the cast.
-- Product shots are technical flat-lay illustrations generated by `tools/make_flats.py` (re-runnable). 360° is a simulated live turn, not an image-to-video flipbook.
-- All prices in USD. Free US shipping over $150; free 30-day returns.
+Warm paper `#f4f3f0` · ink `#151412` · muted grey `#77736c` · hairline `#e3e0da` · tile `#d4d3d0`.
+**Instrument Serif** for the wordmark, page titles and look names · **Manrope** for UI, prices and buttons. Pill buttons, 18–26px radii, 1 px borders, soft diffused shadows, one signature easing: `cubic-bezier(.76,0,.24,1)`.
+
+## 📦 Status & assets
+
+This is a functional demo storefront. Ten model photographs were generated and background-removed locally; product images are technical flat-lay illustrations (`tools/make_flats.py`). See `CHANGELOG.md` for exactly what is real and what is placeholder — the full guide to swapping in real photography is in [`docs/CUSTOMIZATION.md`](docs/CUSTOMIZATION.md).
+
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). Participation implies the [Code of Conduct](CODE_OF_CONDUCT.md). Security reports: see [SECURITY.md](SECURITY.md).
+
+## 📄 License
+
+[MIT](LICENSE) © 2026 iranromorg-glitch
