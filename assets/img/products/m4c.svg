@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="sneaker"><defs>
+<radialGradient id="bg" cx="50%" cy="38%" r="75%">
+  <stop offset="0%" stop-color="#eceae6"/><stop offset="100%" stop-color="#d8d6d1"/>
+</radialGradient>
+<linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/><stop offset=".5" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#151412" flood-opacity="0.28"/></filter>
+</defs>
+<rect width="800" height="800" fill="url(#bg)"/><g filter="url(#soft)" stroke="#151412" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M120 470 Q120 380 250 380 L300 330 Q380 320 430 380 L560 420 Q660 440 664 500 L664 530 L120 530 Z" fill="#eceae6"/>
+<path d="M120 470 L664 470 L664 536 Q400 566 120 536 Z" fill="#c2c0bd"/>
+<path d="M300 380 L360 430 M340 358 L398 424 M380 344 L436 420" stroke="#151412" stroke-opacity=".4" stroke-width="4"/>
+<circle cx="210" cy="420" r="4.5" fill="#8e8c8a" stroke="none"/><circle cx="180" cy="442" r="4.5" fill="#8e8c8a" stroke="none"/>
+<path d="M150 500 L620 500" stroke="#8e8c8a" stroke-width="4" stroke-opacity=".8"/>
+</g></svg>

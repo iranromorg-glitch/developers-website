@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" role="img" aria-label="blazer"><defs>
+<radialGradient id="bg" cx="50%" cy="38%" r="75%">
+  <stop offset="0%" stop-color="#eceae6"/><stop offset="100%" stop-color="#d8d6d1"/>
+</radialGradient>
+<linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#ffffff" stop-opacity=".55"/><stop offset=".5" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<filter id="soft" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#151412" flood-opacity="0.28"/></filter>
+</defs>
+<rect width="800" height="800" fill="url(#bg)"/><g filter="url(#soft)" stroke="#151412" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<path d="M298 178 Q400 132 502 178 L520 196 L536 470 L528 560 L272 560 L264 470 L280 196 Z" fill="#c8b28c"/>
+<path d="M280 196 L206 236 L226 560 L268 548 L264 470" fill="#c8b28c"/>
+<path d="M520 196 L594 236 L574 560 L532 548 L536 470" fill="#c8b28c"/>
+<path d="M400 190 L340 214 L372 330 L400 268 Z" fill="#908065"/>
+<path d="M400 190 L460 214 L428 330 L400 268 Z" fill="#908065"/><path d="M352 172 L384 158 L388 196 L356 200 Z" fill="#6e624d"/><path d="M448 172 L416 158 L412 196 L444 200 Z" fill="#6e624d"/><line x1="400" y1="268" x2="400" y2="546" stroke="#151412" stroke-opacity=".5" stroke-width="2.5"/><line x1="283" y1="240" x2="265" y2="540" stroke="#151412" stroke-opacity=".38" stroke-width="2" stroke-dasharray="7 8" fill="none"/><line x1="517" y1="240" x2="535" y2="540" stroke="#151412" stroke-opacity=".38" stroke-width="2" stroke-dasharray="7 8" fill="none"/><line x1="308" y1="470" x2="356" y2="470" stroke="#151412" stroke-opacity=".38" stroke-width="2" stroke-dasharray="7 8" fill="none"/><line x1="444" y1="470" x2="492" y2="470" stroke="#151412" stroke-opacity=".38" stroke-width="2" stroke-dasharray="7 8" fill="none"/><circle cx="400" cy="330" r="6.5" fill="#6e624d" stroke="none"/><circle cx="400" cy="410" r="6.5" fill="#6e624d" stroke="none"/><circle cx="400" cy="490" r="6.5" fill="#6e624d" stroke="none"/></g></svg>
